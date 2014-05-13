@@ -16,8 +16,11 @@ for n, record in enumerate(screed.open(sys.argv[1])):
     sequence = record['sequence']
     name = record['name']
 
+    N_count = 0
     if 'N' in sequence:
         continue
+        N_count += 1
 
     print ">" + name
+    print str(N_count) + " lines were dropped for N's"
     print sequence
