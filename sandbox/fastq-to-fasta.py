@@ -24,4 +24,4 @@ for n, record in enumerate(screed.open(sys.argv[1])):
     print ">" + name
     print sequence
 
-print>>sys.stderr, str(N_count) + " lines were dropped for N's"
+print>>sys.stderr, str(N_count) + " lines were dropped for 'N's in sequences."
