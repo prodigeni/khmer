@@ -99,4 +99,7 @@ test: all
 	pip install --user nose || pip install nose
 	./setup.py nosetests
 
+sloccount:
+	find khmer lib tests scripts -not -wholename '*/zlib/*' -not -wholename '*/bzip2/*'  -type f| xargs sloccount | grep -v "to top_dir"
+
 FORCE:
